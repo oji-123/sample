@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -33,9 +33,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $post = new \App\Models\Post;
+        $post->content = $request->content;
+        $post->save();
+
+        return \View::make('posts.create');
     }
 
     /**

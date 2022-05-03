@@ -13,4 +13,5 @@
 Route::group(['prefix' => 'posts'], function(){
   Route::get( '/'   , 'PostController@index');
   Route::get( '/new', 'PostController@new');
+  Route::post( '/', 'PostController@create');
 });
