@@ -2,6 +2,8 @@
 
 <h1>トップページ</h1>
 
+<a href="{{ url('/posts/new') }}">新規投稿</a>
+
 @foreach ($posts as $post)
 <div class="post">
   <div class="post-date">
