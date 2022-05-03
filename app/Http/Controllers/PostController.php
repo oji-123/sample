@@ -23,6 +23,16 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function new()
+    {
+        return \View::make('posts.new');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         //
