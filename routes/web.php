@@ -10,5 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/posts', 'PostController@index');
+Route::group(['prefix' => 'posts'], function(){
+  Route::get( '/'   , 'PostController@index');
+  Route::get( '/new', 'PostController@new');
+});
